@@ -1,0 +1,118 @@
+/* body tag */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.main_div {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 20px; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.element_div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#input2{
+    height: 100px;
+    width: 728px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+#pending_tasks_container {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* #pending_tasks_container {
+    margin: 0 auto; 
+  } */
+
+#pending_tasks_container > div {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pending_tasks_container,.title {
+    margin-bottom: 5px;
+}
+
+/* #pending_tasks ,.description {
+    color: #555;
+    margin-bottom: 5px;
+} */
+
+#pending_tasks ,.date,.priority,.description{
+    margin-bottom: 5px;
+    
+}
+
+#pending_tasks_container .newtask,#completed_tasks_container .newtask{
+    word-wrap: break-word; 
+    white-space: normal; 
+    overflow: hidden; 
+    border: 1px solid #fff; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+  }
+  
+#pending_tasks_container .description {
+    word-wrap: break-word; 
+    white-space: normal; 
+    overflow: hidden; 
+  }
+
+  
+  

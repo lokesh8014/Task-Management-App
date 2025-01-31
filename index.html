@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make tasks easy</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- User Input div -->  
+    <div class="main_div">
+        <h2>New task</h2>
+        <hr style="margin-top: 20px; margin-bottom: 20px;" >
+        <div id="input_container">
+            <div id="title_input" class="element_div">
+                <label class="label" style="font-weight: bold;">Title:</label>
+                <input id="input1" type="text" required>
+            </div>
+            <div id="description" class="element_div">
+                <label class="label" style="font-weight: bold;">Description:</label>
+                <textarea type="textarea" id="input2" name="taskInfo"></textarea>
+            </div>
+            <div id="due_date" class="element_div">
+                <label class="label" style="font-weight: bold;">DueDate:</label>
+                <input id="input3" type="date" min="2024-11-01" max="2030-01-01" required>
+            </div>
+            <div id="priority_level" class="element_div">
+                <label class="label" style="font-weight: bold;">Priority:</label>
+                <select id="level_selection">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <button onclick="addTasks()">AddTask</button>
+        </div>
+    </div>   
+
+    <!-- Filtering tasks -->
+    <div class="main_div">
+        <h2 style="font-weight: bold;">Filter Tasks</h2>
+        <hr style="margin-top: 20px; margin-bottom: 20px;" >
+        <div class="element_div">
+            <label class="label" style="font-weight: bold;">Priority:</label>
+            <select id="priority_filter">
+                <option value="all">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+        <br>
+        <div class="element_div">
+            <label class="label" style="font-weight: bold;">Due Date:</label>
+            <select id="date_filter">
+                <option value="all">All</option>
+                <option value="today">Today</option>
+                <option value="next_7_days">next 7 days</option>
+            </select>
+        </div>
+        <br>
+        <div class="element_div">
+            <label class="label" style="font-weight: bold;">Status:</label>
+            <select id="status_filter">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+        <br>
+        <button onclick="applyFilter()">Apply Filter</button>
+    </div>
+
+    <!-- Pending tasks div-->
+    <div class="main_div">
+         <h2>Pending Tasks</h2>
+         <hr style="margin-top: 20px; margin-bottom: 20px;" >
+         <p id="pending_para" style="display: block;">There are no pending tasks.</p>
+        <div id="pending_tasks_container"></div>
+    </div>
+
+    <!-- Completed tasks div-->
+    <div class="main_div">
+        <h2>Completed Tasks</h2>
+        <hr style="margin-top: 20px; margin-bottom: 20px;" >
+        <p id="completed_para" style="display: block;">There are no completed tasks.</p>
+       <div id="completed_tasks_container" style="font-family:cursive"></div>
+   </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
