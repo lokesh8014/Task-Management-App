@@ -13,7 +13,7 @@ body {
     padding: 20px; 
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
 }
 
 #input_container {
@@ -30,7 +30,7 @@ body {
 
 #input2{
     height: 100px;
-    width: 728px;
+    /* width: 728px; */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -61,7 +61,7 @@ button:hover {
 hr {
     border: 0;
     height: 1px;
-    background-color: #ddd;
+    background-color: #ccc;
 }
 
 #pending_tasks_container {
@@ -70,27 +70,14 @@ hr {
     color: #555;
 }
 
-/* #pending_tasks_container {
-    margin: 0 auto; 
-  } */
-
 #pending_tasks_container > div {
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 0px;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-#pending_tasks_container,.title {
-    margin-bottom: 5px;
-}
-
-/* #pending_tasks ,.description {
-    color: #555;
-    margin-bottom: 5px;
-} */
 
 #pending_tasks ,.date,.priority,.description{
     margin-bottom: 5px;
@@ -98,21 +85,20 @@ hr {
 }
 
 #pending_tasks_container .newtask,#completed_tasks_container .newtask{
-    word-wrap: break-word; 
-    white-space: normal; 
-    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
     border: 1px solid #fff; 
     padding: 10px; 
-    margin-bottom: 10px; 
     background-color: #f9f9f9; 
     border-radius: 5px; 
   }
-  
-#pending_tasks_container .description {
-    word-wrap: break-word; 
-    white-space: normal; 
-    overflow: hidden; 
-  }
+.task_content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 
   
   
